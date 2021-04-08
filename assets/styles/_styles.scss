@@ -1,0 +1,79 @@
+.container{
+    @include desktop{
+        /* for layout always use CSS Grid!!!! */
+        display: flex;
+        direction: row;
+    }
+}
+
+.container__buttons{
+    display: flex;
+    flex-direction: column;
+    padding-top:10px;
+    max-width: 600px;
+}
+
+.box{
+    height: 80px;
+    width: 80px;
+    margin: 20px;
+}
+
+.one{
+    background-color: $pewterBlue;
+}
+
+
+.two{
+    background-color: map-get($colors, darkJungleGreen);
+}
+
+
+.three{
+    background-color: map-get($theme, accent);
+}
+
+
+.four{
+    background-color: map-get($theme, secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .box--small{
+        height: 40px;
+        width: 40px;
+        background-color: map-get($theme, accent);
+    }
+}
+
+
+.five{
+    background-color: color(accent);
+}
+
+
+.six{
+    background-color: color(primary-light);
+}
+
+
+.seven{
+    background-color: color(primary-dark);
+}
+
+.eight{
+    background-color: var(--purple);
+}
+
+.nine{
+    background-color: var(--blackCoral);
+}
+
+
+.poet{
+    background-image: url(../images/wislawa.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+    clip-path: polygon(44% 0, 100% 11%, 100% 73%, 23% 100%, 0 49%);
+}

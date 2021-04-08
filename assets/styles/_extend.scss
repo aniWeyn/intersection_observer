@@ -1,0 +1,46 @@
+/*This examples solves a problem when developers do not create atomic components in React, 
+but I want buttons to have shared styling */
+
+.button { 
+    border-color: $white;
+    border: 0.5px solid;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 13px;
+    border-radius: 8px;
+    height: 50px;
+    max-width: 350px;
+    margin:10px;
+  
+    &--checked { // button--checked
+      @extend .button;
+      color: $darkJungleGreen;
+      background-color: $cadetBlueCrayola;
+    }
+  
+    &--notChecked { // button--notChecked
+      @extend .button;
+      color: $white;
+      background-color: $darkJungleGreen;
+    }
+  
+    &__transparent--notChecked {
+      @extend .button;
+      border-color: $darkJungleGreen;
+      color: $darkJungleGreen;
+      background-color: transparent;
+    }
+  
+    &__transparent--checked {
+      @extend .button;
+      border-color: $darkJungleGreen;
+      color: $white;
+      background-color: $darkJungleGreen;
+    }
+  
+    &__transparent:hover {
+      border-color: $darkJungleGreen;
+      color: $darkJungleGreen;
+    }
+  }
